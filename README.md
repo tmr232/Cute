@@ -39,6 +39,15 @@ IDA has 2 APIs for getting the widget associated with a TForm. One for PyQt and 
 in one function.
 
     my_widget = cute.form_to_widget(my_tform)
+   
+### Which Qt Should I Use?
+
+Sometimes, you *do* need to to know the Qt version your code uses. For those cases, ask the `use_qt5` variable.
+
+    if cute.use_qt5:
+        print 'Use Qt5'
+    else:
+        print 'Use Qt4'
     
 ### In a Project
 
