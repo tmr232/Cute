@@ -32,6 +32,8 @@ Cute offers a `cute.connect(...)` method to mitigate the difference between Qt4 
     
     # Cute Code:
     cute.connect(my_object, 'error(QProcess::ProcessError)', my_callback)
+
+The API for disconnecting is the same, just use the `cute.disconnect(...)` function.
     
 ### Form to Widget
 

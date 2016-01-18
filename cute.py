@@ -60,6 +60,19 @@ def connect(sender, signal, callback):
     else:
         return sender.connect(QtCore.SIGNAL(signal), callback)
 
+def disconnect(sender, signal, callback):
+    '''Disconnect a signal.
+    Use this function only in cases where code should work with both Qt5 and Qt4, as it is an ugly hack.
+    Args:
+        sender: The Qt object emitting the signal
+        signal: A string, containing the signal signature (as in Qt4 and PySide)
+        callback: The function to be called upon receiving the signal
+    '''
+    if use_qt5:
+        return getattr(sender, signal.split('(', 1)[0]).disconnect(callback)
+    else:
+        return sender.disconnect(QtCore.SIGNAL(signal), callback)
+
 
 def form_to_widget(tform):
     '''Get the tform's widget.
