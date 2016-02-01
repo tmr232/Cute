@@ -79,7 +79,11 @@ those cases, ask the ``use_qt5`` variable.
 In a Project
 ~~~~~~~~~~~~
 
-The recommended way to use Cute is to copy it into your own project.
+There are two recommended ways to use Cute:
+
+#. Copy it into your own project. This way *does* create code duplication, but avoid dependencies.
+#. Install it as a package - `pip install idacute`.
+
 
 Licensing
 ---------
@@ -89,12 +93,6 @@ project whatsoever.
 
 FAQ
 ---
-
-**Q:** Why is this not on PyPI? Why is there no ``setup.py``?
-
-**A:** This project was separated from Sark to enable dependency-free
-usage. It is meant to be used in a copy-paste fashion (yes, this is
-evil. But a necessary evil.)
 
 **Q:** Why did you name it "cute"?
 
