@@ -82,7 +82,7 @@ In a Project
 There are two recommended ways to use Cute:
 
 #. Copy it into your own project. This way *does* create code duplication, but avoid dependencies.
-#. Install it as a package - `pip install idacute`.
+#. Install it as a package - ``pip install idacute``.
 
 
 Licensing
