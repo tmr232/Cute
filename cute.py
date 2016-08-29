@@ -50,6 +50,8 @@ try:
         from PySide import QtGui, QtCore
         from PySide import QtGui as QtWidgets
 
+        QtCore.Slot = QtCore.pyqtSlot
+
         use_qt5 = False
 finally:
     sys.path = old_path
